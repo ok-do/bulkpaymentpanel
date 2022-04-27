@@ -1,0 +1,142 @@
+/***** 7.2 Individual Listing *****/
+/**Start of Table*!*/
+#user-role-table{
+    height: 700px;
+    text-align: center;
+    overflow: scroll;
+}
+#user-role-table thead tr th{
+    font-weight: bold;
+}
+#user-role-table::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+#user-role-table::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+#user-role-table::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+#user-role-table::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+#user-role-table::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+/*Left*/
+#user-role-table::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#user-role-table::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#user-role-table::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+#user-role-table::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+
+#user-role-table::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+
+
+
+#user-role-table::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+.page-item.active .page-link {
+    background-color: #0c0f3a;
+    border-color: #ffff;
+}
+.page-link{
+    border: none;
+    color: #000;
+}
+.page-item a:focus{
+    box-shadow: none;
+}
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #f1f4f6;
+}
+/*End of Table*/
+
+.add-btn{
+    background: #d2caca !important;
+}
+.add-btn:hover {
+    color: #212529;
+    background-color: #e4e4e4;
+    border-color: #dedede; }
+.add-btn:focus, .add-btn.focus {
+    box-shadow: 0 0 0 0.2rem rgba(215, 216, 216, 0.5); }
+.add-btn.disabled, .add-btn:disabled {
+    color: #212529;
+    background-color: #f7f7f7;
+    border-color: #f7f7f7; }
+.add-btn:not(:disabled):not(.disabled):active, .add-btn:not(:disabled):not(.disabled).active, .show > .add-btn.dropdown-toggle {
+    color: #212529;
+    background-color: #dedede;
+    border-color: #d7d7d7; }
+.add-btn:not(:disabled):not(.disabled):active:focus, .add-btn:not(:disabled):not(.disabled).active:focus, .show > .add-btn.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(215, 216, 216, 0.5); }
+
+.menu-icon{
+    width: 25px;
+}
+.completed{
+    color: green;
+}
+.error2{
+    color: red;
+}
+.rejected{
+    color: #cdcd1b;
+}
+.preprocess{
+    color: blue;
+}
+.ui-state-default {
+    width: 60% !important;
+}
+.calentim-input{
+    width: 460px !important;
+}
+.rowDisable{
+    display: none;
+}
+/**** Media Quries ****/
+@media screen and (max-width: 1551px){
+    #user-role-table{
+        height: 450px;
+    }
+}

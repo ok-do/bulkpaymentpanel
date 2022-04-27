@@ -1,0 +1,80 @@
+body{
+    overflow: scroll;
+}
+
+.calendar-dash{
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 10px;
+  
+}
+
+.menu-icon {
+  width: 25px;
+}
+
+.date-time-dash{
+  
+  font-size: 11px;
+  margin-left:10px;
+
+}
+
+@media screen and (max-width: 415px) {
+
+#canvas{
+    height: 400px;
+    display: block;
+    width: 760px;
+}
+.table-div{
+    width: 345px;
+    overflow-x: scroll;
+}
+
+}
+
+.table-dash thead{
+    background-color: #e8e7ed;
+    height: 50px;
+
+}
+
+ tr{
+   
+    height: 50px;
+
+}
+
+
+  .fixTableHead thead th {
+    position: sticky;
+    top: 0;
+  }
+  .fixTableHead {
+    border-collapse: collapse;        
+    width: 100%;
+  }
+  .fixTableHead th,
+  td {
+    padding: 8px 15px;
+    border: 2px solid #0c0f3a;
+  }
+  .fixTableHead  th {
+    background: #e0e2fb;
+  }
+
+
+  
+@media screen and (max-width: 1551px) {
+
+    .fixTableHead {
+        overflow-y: auto;
+        height: 500px;
+      }
+
+
+}
+
+
+

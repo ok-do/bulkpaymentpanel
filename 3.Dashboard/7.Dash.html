@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Zenix - Crypto Admin Dashboard">
+    <meta property="og:title" content="Zenix - Crypto Admin Dashboard">
+    <meta property="og:description" content="Zenix - Crypto Admin Dashboard">
+    <meta property="og:image" content="https://zenix.dexignzone.com/xhtml/social-image.png">
+    <meta name="format-detection" content="telephone=no">
+    <title>Bulk Payment</title>
+
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+
+    <!--    *** Multiselect Css ***-->
+    <link href="../vendor/multiselect/assets/jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/jquery.multiselect.filter.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/prettify.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../3.Dashboard/css/dashboard.css">
+
+    <!--	*** Font Awesome 5   ***-->
+    <link rel="stylesheet" href="../vendor/fontawesome-free-5.15.4-web/css/all.css">
+
+    <!--    *** Calendar Css ***-->
+    <link rel="stylesheet" href="../vendor/calendar/calentim.min.css">
+
+    <!--    *** Data Table ***-->
+    <link rel="stylesheet" href="../vendor/data_table/data_table.css">
+
+    <!--	Main Css   -->
+    <link href="../css/main.css" rel="stylesheet">
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+                <img class="logo" src="../images/logo.svg" alt="">
+                <span>Bulk Payment</span>
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+
+                        </div>
+                        <ul class="navbar-nav header-right main-notification">
+
+                            <li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link  ai-icon" href="javascript:void(0)" role="button"
+                                    data-toggle="dropdown">
+                                    <svg class="bell-icon" width="24" height="24" viewbox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M22.75 15.8385V13.0463C22.7471 10.8855 21.9385 8.80353 20.4821 7.20735C19.0258 5.61116 17.0264 4.61555 14.875 4.41516V2.625C14.875 2.39294 14.7828 2.17038 14.6187 2.00628C14.4546 1.84219 14.2321 1.75 14 1.75C13.7679 1.75 13.5454 1.84219 13.3813 2.00628C13.2172 2.17038 13.125 2.39294 13.125 2.625V4.41534C10.9736 4.61572 8.97429 5.61131 7.51794 7.20746C6.06159 8.80361 5.25291 10.8855 5.25 13.0463V15.8383C4.26257 16.0412 3.37529 16.5784 2.73774 17.3593C2.10019 18.1401 1.75134 19.1169 1.75 20.125C1.75076 20.821 2.02757 21.4882 2.51969 21.9803C3.01181 22.4724 3.67904 22.7492 4.375 22.75H9.71346C9.91521 23.738 10.452 24.6259 11.2331 25.2636C12.0142 25.9013 12.9916 26.2497 14 26.2497C15.0084 26.2497 15.9858 25.9013 16.7669 25.2636C17.548 24.6259 18.0848 23.738 18.2865 22.75H23.625C24.321 22.7492 24.9882 22.4724 25.4803 21.9803C25.9724 21.4882 26.2492 20.821 26.25 20.125C26.2486 19.117 25.8998 18.1402 25.2622 17.3594C24.6247 16.5786 23.7374 16.0414 22.75 15.8385ZM7 13.0463C7.00232 11.2113 7.73226 9.45223 9.02974 8.15474C10.3272 6.85726 12.0863 6.12732 13.9212 6.125H14.0788C15.9137 6.12732 17.6728 6.85726 18.9703 8.15474C20.2677 9.45223 20.9977 11.2113 21 13.0463V15.75H7V13.0463ZM14 24.5C13.4589 24.4983 12.9316 24.3292 12.4905 24.0159C12.0493 23.7026 11.716 23.2604 11.5363 22.75H16.4637C16.284 23.2604 15.9507 23.7026 15.5095 24.0159C15.0684 24.3292 14.5411 24.4983 14 24.5ZM23.625 21H4.375C4.14298 20.9999 3.9205 20.9076 3.75644 20.7436C3.59237 20.5795 3.50014 20.357 3.5 20.125C3.50076 19.429 3.77757 18.7618 4.26969 18.2697C4.76181 17.7776 5.42904 17.5008 6.125 17.5H21.875C22.571 17.5008 23.2382 17.7776 23.7303 18.2697C24.2224 18.7618 24.4992 19.429 24.5 20.125C24.4999 20.357 24.4076 20.5795 24.2436 20.7436C24.0795 20.9076 23.857 20.9999 23.625 21Z"
+                                            fill="#EB8153"></path>
+                                    </svg>
+                                    <div class="pulse-css"></div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div id="dlab_W_Notification1" class="widget-media dz-scroll p-3 height380">
+                                        <ul class="timeline">
+                                            <li>
+                                                <div class="timeline-panel">
+                                                    <div class="media mr-2">
+                                                        <img alt="image" width="50" src="../images/avatars/2.jpg">
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h6 class="mb-1">Dr sultads Send you Photo</h6>
+                                                        <small class="d-block">29 July 2020 - 02:26 PM</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="timeline-panel">
+                                                    <div class="media mr-2 media-info">
+                                                        KG
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h6 class="mb-1">Resport created successfully</h6>
+                                                        <small class="d-block">29 July 2020 - 02:26 PM</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="timeline-panel">
+                                                    <div class="media mr-2 media-success">
+                                                        <i class="fa fa-home"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h6 class="mb-1">Reminder : Treatment Time!</h6>
+                                                        <small class="d-block">29 July 2020 - 02:26 PM</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="timeline-panel">
+                                                    <div class="media mr-2">
+                                                        <img alt="image" width="50" src="../images/avatars/2.jpg">
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h6 class="mb-1">Dr sultads Send you Photo</h6>
+                                                        <small class="d-block">29 July 2020 - 02:26 PM</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="timeline-panel">
+                                                    <div class="media mr-2 media-danger">
+                                                        KG
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h6 class="mb-1">Resport created successfully</h6>
+                                                        <small class="d-block">29 July 2020 - 02:26 PM</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="timeline-panel">
+                                                    <div class="media mr-2 media-primary">
+                                                        <i class="fa fa-home"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h6 class="mb-1">Reminder : Treatment Time!</h6>
+                                                        <small class="d-block">29 July 2020 - 02:26 PM</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="all-notification" href="javascript:void(0)">See all notifications <i
+                                            class="ti-arrow-right"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="deznav">
+			<div class="deznav-scroll">
+				<div class="main-profile pb-2">
+                    <a href="../11.Profile/profile.html">
+                        <div class="image-bx">
+                            <img src="../images/profile-pic.jpg" alt="">
+                        </div>
+                        <p class="logo-title">BULK PAYMENT (Admin)</p>
+                    </a>
+					<div class="font-weight-bold">
+						<span class="font-weight-bolder">Last Login</span>
+						<div class="d-flex justify-content-between px-2 pt-2">
+							<div>
+								<i class="fa fa-calendar-alt"></i>
+								<span>Tue, 01-Feb-2022</span>
+							</div>
+							<div>
+								<i class="fa fa-clock"></i>
+								<span>04:50</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="metismenu" id="menu">
+					<li class="mm-active">
+						<a href="../index.html" class="ai-icon" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/dashboard%20purple.svg" alt="">
+							<span class="nav-text">Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/Master.svg" alt="">
+							<span class="nav-text">User Role Master</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="../4.User_Role_Master/4.1_company_listing.html">
+									<img class="sidebar-icon" src="../images/icons/Company.svg" alt="">
+									<span class="">Company</span>
+								</a></li>
+							<li>
+								<a href="../4.User_Role_Master/4.4_department_listing.html" class="ai-icon" aria-expanded="false">
+									<img class="sidebar-icon" src="../images/icons/Department.svg" alt="">
+									<span class="">Department</span>
+								</a>
+							</li>
+							<li>
+								<a href="../4.User_Role_Master/4.7_designation_listing.html" class="ai-icon" aria-expanded="false">
+									<img class="sidebar-icon" src="../images/icons/Designation.svg" alt="">
+									<span class="">Designation</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../5.User_Role_Permission/5.1_user_role.html" class="ai-icon" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/User%20Role%20Permission.svg" alt=""
+								style="width: 20px">
+							<span class="nav-text">User Role Permission</span>
+						</a>
+					</li>
+					<li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/Transaction%20Payment.svg" alt="">
+							<span class="nav-text">Bulk Transactions Payment</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="../6.bulk_transaction_payment/6.1.bulk_upload.html">
+									<img class="sidebar-icon" src="../images/icons/Bulk%20Upload.svg" alt="">
+									<span class="">Bulk Upload</span>
+								</a></li>
+							<li>
+								<a href="../6.bulk_transaction_payment/6.2.bulk_file_view.html" class="ai-icon" aria-expanded="false">
+									<img class="sidebar-icon" src="../images/icons/Bulk%20File%20View%20icon.svg"
+										alt="">
+									<span class="">Bulk File View</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/individual_payment.png" alt="">
+							<span class="nav-text">Individual Payment</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="../7.Individual_Payment/7.1_add_individual.html">
+								<img class="sidebar-icon" src="../images/icons/add-list.png" alt="">
+								<span class="">Add Individual Payment</span>
+							</a></li>
+							<li>
+								<a href="../7.Individual_Payment/7.2_individual_listing.html" class="ai-icon" aria-expanded="false">
+									<img class="sidebar-icon" src="../images/icons/Individual%20Payment%20Report.svg" alt="">
+									<span class="">Individual Payment Listing</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+                    <li>
+						<a href="../10.Transaction_details/10.1_initiated_transaction.html" class="ai-icon" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/Transaction Payment.svg" alt="">
+							<span class="nav-text">Transaction Details</span>
+						</a>
+					</li>
+					<li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/Report.svg" alt="">
+							<span class="nav-text">Report</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="../8.Report/8.1.payrollreport.html">
+									<img class="sidebar-icon" src="../images/icons/Payroll%20Report.svg" alt="">
+									<span class="">Payroll Report</span>
+								</a></li>
+							<li>
+								<a href="../8.Report/8.2.supplier.html" class="ai-icon" aria-expanded="false">
+									<img class="sidebar-icon" src="../images/icons/Supplier%20Payment%20Report.svg"
+										alt="">
+									<span class="">Supplier Payment Report</span>
+								</a>
+							</li>
+							<li>
+								<a href="../8.Report/8.3.individual.html" class="ai-icon" aria-expanded="false">
+									<img class="sidebar-icon" src="../images/icons/Individual%20Payment%20Report.svg"
+										alt="">
+									<span class="">Individual Payment Report</span>
+								</a>
+							</li>
+							<li>
+								<a href="../8.Report/8.4.paymentfail.html" class="ai-icon" aria-expanded="false">
+									<img class="sidebar-icon" src="../images/icons/Payment%20Fail%20Report.svg" alt="">
+									<span class="">Payment Fail Report</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../9.Change_Pswrd/9.change_password.html" class="ai-icon" aria-expanded="false">
+							<img class="sidebar-icon" src="../images/icons/change%20password.svg" alt="">
+							<span class="nav-text">Change Password</span>
+						</a>
+					</li>
+					<li>
+						<a class="ai-icon" alt="" aria-expanded="false" data-toggle="modal"
+						data-target="#logoutFormModal">
+							<img class="sidebar-icon" src="../images/icons/Logout.svg" alt="">
+							<span class="nav-text">Logout</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+        <!---Modal Dialogue-->
+        <div class="modal fade .modal-lg " id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg  modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header mb-3">
+                        <h3 class="modal-title" id="staticBackdropLabel">Filter</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="close-filter" aria-hidden="true"><img src="../images/x.svg" alt=""></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body pt-3">
+
+                        <div class="row">
+							<div class="col-xl-6 col-sm-12">
+								<div class="date_time container mb-3 p-0">
+									<p class="">Select Period Date</p>
+									<i class="fa fa-calendar-alt calender-small"></i>
+									<input type="text" id="datetimepicker-dash" class="form-control bg-light date-time-dash" value=""
+										readonly>
+								</div>
+							</div>
+						</div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-sm-12">
+                                <div class="mb-5 ">
+                                    <p class="">Select Status</p>
+                                    <select value="View" id="status" class="multiselect-role-permission"
+                                        multiple="multiple" data-selected-text-format="count" data-live-search="true">
+
+                                        <option>Error</option>
+                                        <option>Pre Process</option>
+                                        <option>Rejected</option>
+                                        <option>Complete</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-6 col-sm-12">
+                                <div class="mb-5 ">
+                                    <p class="">Payment Type </p>
+                                    <select value="View" id="payment" class="multiselect-role-permission"
+                                        multiple="multiple" data-selected-text-format="count" data-live-search="true">
+
+                                        <option>Payroll</option>
+                                        <option>Supplier Payment </option>
+                                        <option>Individual Payment</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-sm-12">
+                                <div class="mb-5 ">
+                                    <p class="">Select Operator</p>
+                                    <select value="View" id="operator" class="multiselect-role-permission"
+                                        multiple="multiple" data-selected-text-format="count" data-live-search="true">
+
+                                        <option>Ooredoo</option>
+                                        <option>MPT</option>
+                                        <option>Mytel</option>
+                                        <option>Telenor</option>
+                                        <option>MEC</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-6 col-sm-12">
+                                <div class="mb-5 ">
+                                    <p class="">View Type </p>
+                                    <select value="View" id="type" class="multiselect-role-permission"
+                                        multiple="multiple" data-selected-text-format="count" data-live-search="true">
+
+                                        <option>Upload Count</option>
+                                        <option>Transaction Count </option>
+                                        <option>Amount</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger mr-5 reset-btn" data-dismiss="modal">Reset</button>
+                        <button type="button" class="btn btn-primary apply-btn">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold user-role-title">Total Bulk Payroll Payment Amount Month Wise</h3>
+                    <div class="d-flex justify-content-between align-items-center">
+						<div class="pr-2">
+							<a href="#"><img class="menu-icon filter-btn" data-toggle="modal"
+									data-target="#staticBackdrop" src="../images/icons/Filter.svg" alt=""
+									data-bs-placement="bottom" data-bs-toggle="tooltip" title="Filter">
+							</a>
+                            <select name="" id="">
+								<option value="">Monthly Wise Amount</option>
+								<option value="">Daily Wise Amount</option>
+								<option value="">Weekly Wise Amount</option>
+								<option value="">Quarterly Wise Amount</option>
+								<option value="">Half Yearly Wise Amount</option>
+								<option value="">Yearly Wise Amount</option>
+							</select>
+
+						</div>
+
+					</div>
+                </div>
+
+
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="fixTableHead">
+                                <table>
+
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 200px;">Month</th>
+                                            <th style="width: 400px;">Total Uploaded File Count</th>
+                                            <th style="width: 400px;">Total OK$ Transaction Account No Count</th>
+                                            <th style="width: 200px;">Amount MMK</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>January </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>1,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>February </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>2,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>3,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>April </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>4,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>May </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>7,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>June </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>5,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>3,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>August </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>1,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>September </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>6,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>October </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>7,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>November </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>9,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>December </td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                            <td>2,000,000</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors Jquery -->
+
+    <script src="../vendor/chart_js/chart.min.js"></script>
+
+    <script src="../vendor/global/global.min.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/moment.min.js"></script>
+
+    <!--*** Multiselect ***-->
+    <script src="../vendor/multiselect/assets/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../vendor/multiselect/js/jquery.multiselect.js" type="text/javascript"></script>
+    <script src="../vendor/multiselect/js/jquery.multiselect.filter.js" type="text/javascript"></script>
+
+    <!--*** Data Table ***-->
+    <script src="../vendor/data_table/jquery.dataTables.min.js"></script>
+    <script src="../vendor/data_table/dataTables.bootstrap4.min.js"></script>
+
+    <!--*** Calendar ***-->
+    <script src="../vendor/calendar/calentim.min.js"></script>
+
+    <!--	Main JS    -->
+    <script src="../js/custom.min.js"></script>
+    <script src="../js/deznav-init.js"></script>
+    <script>
+
+        $("#datetimepicker-dash").calentim({
+            showFooter: false,
+            showTimePickers: false,
+            minDate: new Date(),
+            format: "ddd,DD-MMM-YYYY",
+            hourFormat: 24
+        });
+        $("#status").multiselect().multiselectfilter({
+            label: false
+        });
+        $("#payment").multiselect().multiselectfilter({
+            label: false
+        });
+        $("#operator").multiselect().multiselectfilter({
+            label: false
+        });
+        $("#type").multiselect({
+            multiple: false,
+            header: false
+        });
+    </script>
+
+
+
+</body>
+
+</html>

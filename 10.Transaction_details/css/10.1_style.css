@@ -1,0 +1,235 @@
+/* table css */
+#initiatedTransactionsTable{
+    height: 745px;
+    text-align: center;
+    overflow-y: hidden;
+}
+#initiatedTransactionsTable thead tr th{
+    font-weight: bold;
+    width: 400px;
+}
+
+
+#compeleteTable{
+    height: 700px;
+    text-align: center;
+    overflow: scroll;
+}
+#compeleteTable thead tr th{
+    font-weight: bold;
+    width: 550px;
+}
+#compeleteTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+#compeleteTable::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+#compeleteTable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+#compeleteTable::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+#compeleteTable::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+.table th, .table td {
+    padding: 0.75rem 2.75rem !important;
+}
+/*Left*/
+#compeleteTable::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#compeleteTable::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#compeleteTable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+#compeleteTable::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+#compeleteTable::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+#compeleteTable::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #f1f4f6;
+}
+
+/*  */
+#errorBulkTranTable{
+    height: 110px;
+    text-align: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#errorBulkTranTable thead tr th{
+    font-weight: bold;
+    width: 550px;
+}
+#errorBulkTranTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+/*Left*/
+#errorBulkTranTable::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#errorBulkTranTable::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#errorBulkTranTable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+
+/*  */
+#totalInitiateTable{
+    height: 410px;
+    text-align: center;
+    overflow: scroll;
+}
+#totalInitiateTable thead tr th{
+    font-weight: bold;
+    width: 550px;
+}
+#totalInitiateTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+#totalInitiateTable::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+#totalInitiateTable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+#totalInitiateTable::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+#totalInitiateTable::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+.table th, .table td {
+    padding: 0.75rem 2.75rem !important;
+}
+/*Left*/
+#totalInitiateTable::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#totalInitiateTable::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#totalInitiateTable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+#totalInitiateTable::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+#totalInitiateTable::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+#totalInitiateTable::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+
+
+/* compeleted, reject, pre-process etc bar */
+.progress{
+    height: 12px !important;
+}
+.tGreen{
+    color: green;
+    text-decoration: underline;
+}
+.tRed{
+    color: red;
+    text-decoration: underline;
+}
+.tBlue{
+    color: blue;
+    text-decoration: underline;
+}
+.fileLink{
+    color: blue;
+    text-decoration: underline;
+    font-style: italic;
+}
+.tGold{
+    color: goldenrod;
+    text-decoration: underline;
+}
+span.border-passchange {
+    border-color: #8655FC !important;
+}
+
+@media screen and (max-width: 1551px){
+    #compeleteTable {
+        height: 525px;
+    }
+    #totalInitiateTable {
+        height: 227px;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+	const data1 = {
+						labels: ["jan", "feb", "mac", "apr"],
+						datasets: [{
+							label: 'For sale',
+							borderColor: 'rgb(255, 99, 132)',
+							backgroundColor: 'rgb(255, 99, 132)',
+							fill: false,
+							data: [3, 2, 3, 4],
+							yAxisID: 'y',
+						}, 
+						{
+							label: 'For rent',
+							borderColor: 'rgb(54, 162, 235)',
+							backgroundColor: 'rgb(54, 162, 235)',
+							fill: false,
+							data: [4,5,6,7],
+							yAxisID: 'y1'
+						}]
+					};
+
+				const options1 = {
+					responsive: true,
+					interaction: {
+					  mode: 'index',
+					  intersect: false,
+					},
+					stacked: false,
+					plugins: {
+					  title: {
+						display: true,
+						text: 'Chart.js Line Chart - Multi Axis'
+					  }
+					},
+					scales: {
+					  y: {
+						type: 'linear',
+						display: true,
+						position: 'left',
+					  },
+					  y1: {
+						type: 'linear',
+						display: true,
+						position: 'right',
+				
+						// grid line settings
+						grid: {
+						  drawOnChartArea: false, // only want the grid lines for one axis to show up
+						},
+					  },
+					}
+				  };
+
+				  new Chart('myChart', {
+						type: 'line',
+						data: data1,
+						options: options1
+					});
+</script>
+</body>
+</html>

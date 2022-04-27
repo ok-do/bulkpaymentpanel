@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Zenix - Crypto Admin Dashboard">
+    <meta property="og:title" content="Zenix - Crypto Admin Dashboard">
+    <meta property="og:description" content="Zenix - Crypto Admin Dashboard">
+    <meta property="og:image" content="https://zenix.dexignzone.com/xhtml/social-image.png">
+    <meta name="format-detection" content="telephone=no">
+    <title>Bulk Payment</title>
+
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+
+    <!--    *** Multiselect Css ***-->
+    <link href="../vendor/multiselect/assets/jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/jquery.multiselect.filter.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/prettify.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/multiselect/assets/jquery-ui.css" rel="stylesheet" type="text/css">
+
+    <!--	*** Font Awesome 5   ***-->
+    <link rel="stylesheet" href="../vendor/fontawesome-free-5.15.4-web/css/all.css">
+
+    <!--    *** Calendar Css ***-->
+    <link rel="stylesheet" href="../vendor/calendar/calentim.min.css">
+
+    <!--    *** Intl' Phone Css ***-->
+    <link rel="stylesheet" href="../vendor/intl_phonenumber/css/intlTelInput.css">
+
+    <!--    *** Data Table ***-->
+    <link rel="stylesheet" href="../vendor/data_table/transaction_jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../vendor/data_table/select.dataTables.min.css">
+
+    <!--    *** Pattern Css ***-->
+    <link rel="stylesheet" href="../vendor/pattern-lock/lock.css">
+    <link rel="stylesheet" href="../vendor/pattern-lock/patternlock.css">
+
+    <!--	Main Css   -->
+    <link rel="stylesheet" href="css/10.2_style.css">
+    <link href="../css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--*******************
+Preloader start
+********************-->
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<!--*******************
+Preloader end
+********************-->
+
+<!--**********************************
+Main wrapper start
+***********************************-->
+<div id="main-wrapper">
+
+    <!--**********************************
+    Nav header start
+***********************************-->
+    <div class="nav-header">
+        <a href="../index.html" class="brand-logo">
+            <img class="logo" src="../images/logo.svg" alt="">
+            <span>Bulk Payment</span>
+        </a>
+    </div>
+    <!--**********************************
+    Nav header end
+***********************************-->
+
+    <!--**********************************
+    Header start
+***********************************-->
+    <div class="header">
+        <div class="header-content">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse justify-content-between">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--**********************************
+    Header end ti-comment-alt
+***********************************-->
+
+    <!--**********************************
+    Content body start
+***********************************-->
+    <div class="pt-5">
+        <div class="container-fluid pt-3">
+            <div class="row ">
+                <div class="col-12 validation-logo-div d-flex justify-content-center align-items-center flex-column font-weight-bold">
+                    <div class="py-3">
+                        <img class="validation-logo" src="../images/OK$_logo.png" alt="">
+                    </div>
+                    <div class="form-group validation-form">
+                        <div class="mt-5 container-fluid">
+                            <input type="text" id="phone" class="dpmnt-name form-control bg-light"
+                                   placeholder="09XXXXXXX" required="required">
+                            <div class="pswrd-box py-3 d-none">
+                                <div class="form-gp">
+                                    <div class="form-icons">
+                                        <i class="fa fa-lock text-dark"></i>
+                                    </div>
+                                    <input type="password" placeholder="Enter Password" id="exampleInputPassword1">
+                                    <i class="fa fa-eye-slash" id="eye"></i>
+                                </div>
+                                <small class="text-danger incorrect-text d-none font-weight-bold">You Have Entered Incorrect Password</small>
+                            </div>
+                            <div id="wrapper" class="d-none patternLockBox">
+                                <div id="pattern1_container" class="pattern_container">
+                                    <div id="pattern1">
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="text-white text-center pt-3 precare-text">*Allow Merchant, Merchant and Agent Account Allow to Payment Only</h4>
+                            <h4 id="personal-invalid" class="invalid-text text-center d-none pt-3">Personal Account Not Allow. Please Enter Merchant or Agent Account Number.</h4>
+                            <h4 id="merchant-dummy-invalid" class="invalid-text text-center d-none pt-3">Dummy Merchant Account Not Allow. Please Enter Advance Merchant, Merchant or Agent Account Number</h4>
+                            <h4 id="other-invalid" class="invalid-text text-center d-none pt-3">You Have Entered OK$ Mobile Number Is Invalid Account Number</h4>
+                            <h4 id="block-invalid" class="invalid-text text-center d-none pt-3">You Have Entered OK$ Mobile Number Is Block Account Number</h4>
+                            <h4 id="inactive-invalid" class="invalid-text text-center d-none pt-3">You Have Entered OK$ Mobile Number Is Inactive Account Number</h4>
+                            <h4 id="unregister-invalid" class="invalid-text text-center d-none pt-3">You Have Entered OK$ Mobile Number Is Unregister Account Number</h4>
+                            <div id="verifyBtn-box" class="py-3">
+                                <button id="verifyBtn" class="btn verify-btn font-weight-bold">Verify</button>
+                            </div>
+                            <div id="loginBtn-box" class="pb-3 d-none">
+                                <button id="loginBtn" class="btn font-weight-bold"><a href="individual-payment-listing.html" class="text-decoration-none">Login</a></button>
+                            </div>
+                            <div id="patternBtn-box" class="pb-3 d-none">
+                                <button id="patternBtn" class="btn font-weight-bold"><img class="patter-img" src="../images/pattern.png" alt=""><span class="px-2">Switch To Pattern</span></button>
+                            </div>
+                            <div id="swtichToPswrdBox" class="py-2 d-none">
+                                <button id="swtichToPswrdBtn" class="btn font-weight-bold"><i class="fa fa-lock"></i><span class="px-2">Switch To Password</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--**********************************
+    Content body end
+***********************************-->
+</div>
+
+</div>
+<!--**********************************
+Main wrapper end
+***********************************-->
+
+<!--**********************************
+Scripts
+***********************************-->
+<!-- Required vendors Jquery -->
+<script src="../vendor/global/global.min.js"></script>
+<script src="../js/popper.js"></script>
+<script src="../js/moment.min.js"></script>
+
+<!--*** Multiselect ***-->
+<script src="../vendor/multiselect/assets/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../vendor/multiselect/js/jquery.multiselect.js" type="text/javascript"></script>
+<script src="../vendor/multiselect/js/jquery.multiselect.filter.js" type="text/javascript"></script>
+
+<!--*** Data Table ***-->
+<script src="../vendor/data_table/jquery.dataTables.min.js"></script>
+<script src="../vendor/data_table/dataTables.bootstrap4.min.js"></script>
+<script src="../vendor/data_table/dataTables.select.min.js"></script>
+
+<!--*** Calendar ***-->
+<script src="../vendor/calendar/calentim.min.js"></script>
+
+<!--*** Intl' Phone ***-->
+<script src="../vendor/intl_phonenumber/js/intlTelInput.js"></script>
+
+<!--*** Lock Pattern ***-->
+<script src="../vendor/pattern-lock/lock.js"></script>
+<script src="../vendor/pattern-lock/patternlock.js"></script>
+
+<!--	Main JS    -->
+<script src="js/10.6_transaction.js"></script>
+<script src="../js/custom.min.js"></script>
+<script src="../js/deznav-init.js"></script>
+
+<script>
+    // *** Intl' Phone ***
+
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        allowDropdown: false,
+        // autoHideDialCode: false,
+        autoPlaceholder: "off",
+        // dropdownContainer: document.body,
+        // excludeCountries: ["us"],
+        // formatOnDisplay: false,
+        // geoIpLookup: function(callback) {
+        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //     var countryCode = (resp && resp.country) ? resp.country : "";
+        //     callback(countryCode);
+        //   });
+        // },
+        // hiddenInput: "full_number",
+        initialCountry: "mm",
+        // localizedCountries: { 'de': 'Deutschland' },
+        // nationalMode: false,
+        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        // placeholderNumberType: "MOBILE",
+        // preferredCountries: ['cn', 'jp'],
+        separateDialCode: true,
+        utilsScript: "build/js/utils.js",
+    });
+    // *** Intl' Phone ***
+
+    // *** Create Acc Success ***
+    $(function () {
+
+        $(document).ready(function () {
+            $('#submit').on("click", function () {
+                console.log("hello")
+                setTimeout(function () {
+                    window.location.replace("5.1_user_role.html");
+                }, 3000)
+            })
+        })
+
+        setTimeout(function () {
+            $('#accCreateModal').modal('hide');
+
+        }, 5000);
+
+    });
+    $(document).ready(function () {
+        let password = $('#exampleInputPassword1');
+        $('#eye').click(function () {
+            if (password.prop('type') == 'password') {
+                $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+                password.attr('type', 'text')
+            } else {
+                $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+                password.attr('type', 'password')
+            }
+        })
+    });
+</script>
+<!--***** Scripts *****-->
+
+
+</body>
+
+</html>

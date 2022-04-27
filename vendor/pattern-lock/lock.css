@@ -1,0 +1,35 @@
+#wrapper
+{
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    margin:0 auto;
+    padding:0px;
+}
+.pattern_container
+{
+    margin-top:20px;
+}
+.pattern_container p
+{
+    margin:0px;
+    color:#0B2161;
+    font-size:25px;
+    font-weight:bold;
+}
+#pattern1_container input[type="button"]
+{
+    background:none;
+    border:none;
+    margin-top:10px;
+    border:1px solid #0B2161;
+    color:#0B2161;
+    width:310px;
+    margin-left:-5px;
+    height:45px;
+    font-size:17px;
+}
+#pattern2_container
+{
+    display:none;
+}

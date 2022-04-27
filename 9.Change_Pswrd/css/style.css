@@ -1,0 +1,40 @@
+input:focus-visible{
+    outline: none !important;
+}
+.change-pass-form .password{
+    margin-bottom: 60px;
+}
+
+.change-pass-form input{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: none;
+    width: 40%;
+    border-bottom: #737374 1px solid !important;
+
+}
+.change-pass-form input:focus{
+    box-shadow: none !important;
+
+}
+.change-pass-form{
+    margin-left: 50px;
+}
+span.border-passchange{
+    border-color: #7448f3 !important;
+}
+.save-btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 415px) {
+
+    .change-pass-form input{
+        width: 80%;
+
+    }
+}
+

@@ -1,0 +1,711 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+/*-------------------- 1.Login ------------------- */
+body{
+    overflow: hidden;
+}
+.login-area {
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-box {
+    font-family: 'Roboto', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.login-box form {
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    background-color: #825bf2;
+    border-radius: 15px;
+}
+
+.login-form-head {
+    text-align: center;
+    padding: 10px;
+}
+
+.login-form-head h1 {
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #fff;
+    font-size: 56px;
+}
+
+.login-form-head p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.login-form-body {
+    padding: 30px 50px 20px 50px;
+}
+#eye{
+    top: 15px;
+}
+.form-gp {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-gp label {
+    position: absolute;
+    left: 50px;
+    top: 15px;
+    color: #0c0f3a;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+#phone::placeholder{
+    color: #0c0f3a !important;
+}
+
+.form-gp.focused label {
+    top: -25px;
+    color: #1d162e;
+}
+
+.form-gp input {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #eea200;
+    /* border-bottom: 1px solid #0c0f3a; */
+    padding-left: 50px;
+    color: #0c0f3a;
+}
+
+.form-gp input::-webkit-input-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp input::-moz-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp input:-ms-input-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp input:-moz-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0c0f3a;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.rmber-area {
+    font-size: 13px;
+}
+
+.submit-btn-area,.submit1-btn-area,.cancel-btn-area,.otp-btn-area,.reveal-otp-btn,.new-otp-btn-area {
+    text-align: center;
+}
+
+.submit-btn-area button {
+    width: 43%;
+    height: 50px;
+    border: 3px solid #eea200;
+    background: #fff;
+    color: #825bf2;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0px 8px 18px #0c0f3a;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.submit-btn-area button:hover {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #eea200;
+}
+
+.submit-btn-area button i {
+    margin-left: 15px;
+    -webkit-transition: margin-left 0.3s ease 0s;
+    transition: margin-left 0.3s ease 0s;
+}
+
+.submit-btn-area button:hover i {
+    margin-left: 20px;
+}
+
+.submit1-btn-area button {
+    width: 43%;
+    height: 50px;
+    border: 3px solid #fff;
+    background: #0147cb;
+    color: #fff;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0px 8px 18px #0c0f3a;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.submit1-btn-area button:hover {
+    border: 1px solid #0147cb;
+    background: #0147cb;
+    color: #fff;
+}
+
+.submit1-btn-area button i {
+    margin-left: 15px;
+    -webkit-transition: margin-left 0.3s ease 0s;
+    transition: margin-left 0.3s ease 0s;
+}
+
+.submit1-btn-area button:hover i {
+    margin-left: 20px;
+}
+
+.login-other a {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 43px;
+    line-height: 43px;
+    border-radius: 40px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 12px;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+}
+
+.login-other a i {
+    margin-left: 5px;
+}
+
+.login-other a.fb-login {
+    background: #8655FC;
+    color: #fff;
+}
+
+.login-other a.fb-login:hover {
+    box-shadow: 0 5px 15px rgba(44, 113, 218, 0.38);
+}
+
+.login-other a.google-login {
+    background: #fb5757;
+    color: #fff;
+}
+
+.login-other a.google-login:hover {
+    box-shadow: 0 5px 15px rgba(251, 87, 87, 0.38);
+}
+
+/* login-s2 */
+
+.login-s2 {
+    background: url(../../../images/login-bg.jpg) center/cover no-repeat;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 100vh;
+}
+.login-s3 {
+    background: url(../../../assets/images/forget-pwd-background.jpg) center/cover no-repeat;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 100vh;
+}
+.login-s2 .login-form-head h4,
+.login-s2 .login-form-head p {
+    color: #444;
+}
+.form-icons i{
+    left: 10px;
+    font-size: 30px;
+}
+.form-icons{
+    text-align: center;
+    width: 59px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+}
+.login-form-container{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+/*-------------------- Wrong Password ------------------- */
+.wrong-password-message{
+    display: none;
+    min-width: 400px;
+    height: 150px;
+    background-color: #0c0f3a;
+    border-radius: 20px;
+}
+.reveal-wrong-message {
+    min-width: 400px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    color: #eea200;
+    border: 4px solid #eea200;
+}
+.passwordRemember{
+    display: none;
+}
+.dNone{
+    display: none !important;
+}
+.brown-color{
+    height: 65px;
+    background-color:#eea200 ;
+}
+/*-------------------- Wrong Password ------------------- */
+
+/*-------------------- 2.Forget Pw CSS --------------------*/
+
+.form-gp-phone {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-gp-phone label {
+    position: absolute;
+    left: 120px;
+    top: 10px;
+    color: #b3b2b2;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.form-gp-phone.focused label {
+    top: -20px;
+    left: 60px;
+    color: #FFFFFF;
+}
+
+.form-gp-phone input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #97520d;
+    padding-left: 50px;
+    color: #FFFFFF;
+}
+
+.form-gp-phone input::-webkit-input-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp-phone input::-moz-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp-phone input:-ms-input-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp-phone input:-moz-placeholder {
+    color: #dad7d7;
+}
+
+.form-gp-phone i {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+.cancel-btn-area button {
+    width: 43%;
+    height: 50px;
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0px 8px 18px #0c0f3a;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.otp-btn-area button {
+    display: none;
+    width: 43%;
+    height: 50px;
+    border: 1px solid #fff;
+    background: #0c0f3a;
+    color: #fff;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0px 8px 18px #0c0f3a;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.new-otp-btn-area button {
+    display: none;
+    width: 43%;
+    height: 50px;
+    border: 1px solid #fff;
+    background: #0c0f3a;
+    color: #fff;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0px 8px 18px #0c0f3a;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.req-otp-btn{
+    background: linear-gradient(#ebb22b, #ebd93d );
+}
+.req-otp-btn:hover{
+    border: 1px solid #e8b01a;
+    background: linear-gradient(#e8b01a, #ebd93d );
+}
+.reveal-otp-btn button{
+    display: unset;
+    z-index: 1;
+    width: 43%;
+    height: 50px;
+    border: 3px solid #fff;
+    background: #068119;
+    color: #fff;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0px 8px 18px #0c0f3a;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.reveal-otp-btn button:hover{
+    border: 1px solid #068119;
+    background:#068119;
+}
+
+/*5. New password */
+.modal-content{
+    width: 55% !important;
+    margin: 30px auto !important;
+    border-radius: 10px;
+    border: 5px solid #eea200;
+}
+
+/*End of 5. New password */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#otp-code {
+    width: 334px;
+    margin-left: 55px;
+    padding-left: 55px;
+    background-color: #bc842e;
+}
+.otp-lock {
+    position: relative;
+    height: 34px;
+    padding: 3px;
+    background-color: #FFFFFF;
+    top: 36px;
+    left: 58px;
+    font-size: 20px;
+}
+::placeholder{
+    color: white !important;
+}
+.resend-btn {
+    background: #087d74 !important;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #825bf2;
+    border-radius: 5px;
+    border: 2px solid #fff;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ad97ec;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #ad97ec;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 7px;
+    height: 15px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/*-------------------- Forget Pw CSS --------------------*/
+.containerHeight{
+    min-height: 90vh;
+}
+
+/* ------------------------------------- mobile number css ----------------------------- */
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: transparent !important;
+}
+.iti--separate-dial-code .iti__selected-dial-code {
+    color: #0c0f3a !important;
+}
+.fa-mobile{
+    font-size: 40px !important;
+    top: 7px !important;
+}
+
+/* ------------------------------------- timer css ----------------------------- */
+.base-timer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.base-timer__svg {
+    transform: scaleX(1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: #fff;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: #eea200;
+}
+
+.base-timer__path-remaining.orange {
+    color: rgb(212, 212, 36);
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+.txtsm{
+    margin-left: 8px;
+    font-size: 18px;
+}
+.otpExpire{
+    font-size: 42px;
+    z-index: 1000;
+    top: 185px;
+    left: 203px;
+    position: absolute;
+    color: #0c0f3a;
+}
+.footerTxt{
+    font-size: 18px;
+    word-spacing: 7px;
+}
+.otpImg{
+    max-width: 50%;
+}
+@media screen and (max-width: 1551px){
+
+    .reveal-wrong-message {
+        top: 350px;
+    }
+    .containerHeight{
+        min-height: 88vh !important;
+    }
+    .pt-5, .py-5 {
+        padding-top: 0 !important;
+    }
+    .login-form-body {
+        padding: 37px 33px 7px 33px;
+    }
+    .p-3{
+        padding: 0 !important;
+    }
+    .login-form-head h1{
+        font-size: 36px;
+        margin-bottom: 3px;
+    }
+    .loginBodySub{
+        padding: 0px 33px 7px 33px;
+    }
+    .midRow{
+        margin-bottom: 1rem !important;
+        margin-top: 1rem !important;
+    }
+    .otpExpire{
+        top: 139px;
+    left: 149px;
+    }
+    .footerTxt{
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 780px ){
+    .containerHeight{
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+    .otpExpire{
+        top: 139px;
+    left: 238px;
+
+    }
+    .login-s2 {
+        background: url(../../../assets/images/Login-bg-tablet.jpg) center/cover no-repeat;
+    }
+    .login-s3 {
+        background: url(../../../assets/images/forget-pwd-bg-tablet.jpg) center/cover no-repeat;
+    }
+}
+@media screen and (max-width: 415px ){
+    .login-form-container{
+        align-items: unset;
+        justify-content: unset;
+    }
+    .login-form-head h1 {
+        font-size: 25px !important;
+    }
+    .reveal-wrong-message {
+        top: 257px !important;
+        width: 325px;
+        left: 45px;
+    }
+    .circle{
+        top: 360px !important;
+    }
+    #countdown-number{
+        top: 390px !important;
+    }
+    .otpExpire{
+        top: 179px;
+        left: 57px;
+        font-size: 40px ;
+    }
+}
+@media screen and (max-width: 780px ){
+    .login-form-head h1 {
+        font-size: 50px;
+    }
+    .reveal-wrong-message {
+        top: 477px;
+    }
+
+}
+/*-------------------- END Login ------------------- */
+
+

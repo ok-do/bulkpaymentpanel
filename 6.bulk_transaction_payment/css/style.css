@@ -1,0 +1,542 @@
+/****  ****/
+.menu-icon{
+    width: 25px;
+}
+.edit-img{
+    width: 25px;
+}
+.avatar{
+    width: 50px;
+    border-radius: 50%;
+}
+#file-upload {
+    cursor: pointer;
+    background: #f0f7f0 !important;
+    box-shadow: 1px 1px 1px #f0f7f0;
+}
+.uploadLabel {
+    background: #f0f7f0 !important;
+    box-shadow: 1px 1px 1px #f0f7f0 !important;
+}
+.uploadFile {
+    opacity: 0;
+    z-index: 0;
+    height: 0;
+}
+.uploadFbtn{
+    color: #8655FC;
+    box-shadow: none;
+    border: none;
+    font-size: 15px;
+    background: #e1d9f9 !important;
+}
+.rowDisable{
+    display: none !important;
+}
+::-webkit-file-upload-button {
+    display: none;
+ }
+.icon-rtl {
+    padding-right: 25px;
+    margin-right: 25px;
+    background: url(../../images/icons/Payroll\ Format.svg) no-repeat right 10px;
+    background-size: 20px;
+  }
+
+.form-control{
+    border-radius: 16px !important;
+}
+span.border-passchange{
+    border-color: #8655FC !important;
+}
+.calender-small {
+    top: 78px !important;
+    left: 28px !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    width: 70% !important;
+}
+#datetimepicker {
+    width: 70% !important;
+}
+
+.tGreen{
+    color: green;
+    text-decoration: underline;
+}
+.tRed{
+    color: red;
+    text-decoration: underline;
+}
+.tBlue{
+    color: blue;
+    text-decoration: underline;
+}
+.fileLink{
+    color: blue;
+    text-decoration: underline;
+    font-style: italic;
+}
+.tGold{
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+.progress-label{
+    margin-bottom: 0% !important;
+}
+
+.progress{
+    height: 11px !important;
+}
+/* table css */
+#bulkPayrollTable{
+    height: 110px;
+    text-align: center;
+    overflow: scroll;
+}
+#bulkPayrollTable thead tr th{
+    font-weight: bold;
+    width: 260px;
+}
+#bulkPayrollTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+
+
+#searchTable{
+    height: 345px;
+    text-align: center;
+    overflow: scroll;
+}
+#searchTable thead tr th{
+    font-weight: bold;
+    width: 350px;
+}
+#searchTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+#searchTable::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+#searchTable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+#searchTable::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+#searchTable::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+
+/*Left*/
+#searchTable::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#searchTable::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#searchTable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+#searchTable::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+#searchTable::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+#searchTable::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+
+#completeTable{
+    height: 113px;
+    text-align: center;
+    overflow: scroll;
+}
+#completeTable thead tr th{
+    font-weight: bold;
+    width: 350px;
+}
+#completeTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+#completeLTable{
+    height: 580px;
+    text-align: center;
+    overflow: scroll;
+}
+#completeLTable thead tr th{
+    font-weight: bold;
+    width: 350px;
+}
+#completeLTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+#completeLTable::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+#completeLTable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+#completeLTable::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+#completeLTable::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+
+/*Left*/
+#completeLTable::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#completeLTable::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#completeLTable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+#completeLTable::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+#completeLTable::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+#completeLTable::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+
+#singleBulkPayrollTable{
+    height: 535px;
+    text-align: center;
+    overflow: scroll;
+}
+#singleBulkPayrollTable thead tr th{
+    font-weight: bold;
+    width: 350px;
+}
+#singleBulkPayrollTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+#singleBulkPayrollTable::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+#singleBulkPayrollTable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+#singleBulkPayrollTable::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+#singleBulkPayrollTable::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+
+/*Left*/
+#singleBulkPayrollTable::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#singleBulkPayrollTable::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#singleBulkPayrollTable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+#singleBulkPayrollTable::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+#singleBulkPayrollTable::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+#singleBulkPayrollTable::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+#errorTable{
+    height: 580px;
+    text-align: center;
+    overflow: scroll;
+}
+#errorTable thead tr th{
+    font-weight: bold;
+    width: 350px;
+}
+#errorTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+#errorTable::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+#errorTable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+#errorTable::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+#errorTable::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+/*Left*/
+#errorTable::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+#errorTable::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+#errorTable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+#errorTable::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+#errorTable::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+#errorTable::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+#errorTable th,#errorTable td {
+    padding: 0.75rem 2.75rem !important;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #f1f4f6;
+}
+/* pretty radio */
+label.radioLabel > input[type="radio"] {
+    display: none;
+  }
+  label.radioLabel > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.25rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+  }
+  label.radioLabel > input[type="radio"]:checked + * {
+    color: #8655FC;
+  }
+  label.radioLabel > input[type="radio"]:checked + *::before {
+    background: radial-gradient(#8655FC 0%, #8655FC 40%, transparent 50%, transparent);
+    border-color: #8655FC;
+  }
+  
+  label.radioLabel > input[type="radio"] + * {
+    display: inline-block;
+  }
+
+.radioRowDisabled{
+    display: none;
+}
+
+/* btn css */
+.initiateBtn {
+    color: #f0f7f0;
+    background:  #025599 !important;
+    background-color:  #025599 !important;
+    border-color:  #025599 !important;
+    border-radius: 25px;
+    font-weight: 500;
+    width: 120px;
+}
+.initiateBtn:hover
+{
+    color: #f0f7f0;
+    background:  #025599 !important;
+    background-color:  #025599 !important;
+    border-color:  #025599 !important;
+}
+.initiateBtn:active
+{
+    color: #f0f7f0;
+    background:  #025599 !important;
+    background-color:  #025599 !important;
+    border-color: #025599  !important;
+}
+.initiateBtn:focus
+{
+    color: #f0f7f0;
+    background:  #025599 !important;
+    background-color:  #025599 !important;
+    border-color: #025599  !important;
+}
+.cancelBtn {
+    color: #f0f7f0;
+    background:  #ed1b24 !important;
+    background-color:  #ed1b24 !important;
+    border-color:  #ed1b24 !important;
+    border-radius: 25px;
+    font-weight: 500;
+    width: 120px;
+}
+.cancelBtn:hover
+{
+    color: #f0f7f0;
+    background:  #ed1b24 !important;
+    background-color:  #ed1b24 !important;
+    border-color:  #ed1b24 !important;
+}
+.cancelBtn:active
+{
+    color: #f0f7f0;
+    background:  #ed1b24 !important;
+    background-color:  #ed1b24 !important;
+    border-color: #ed1b24  !important;
+}
+.cancelBtn:focus
+{
+    color: #f0f7f0;
+    background:  #ed1b24 !important;
+    background-color:  #ed1b24 !important;
+    border-color: #ed1b24  !important;
+}
+
+.bulkPayroll{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: unset !important;
+    background-color: #ffffff;
+}
+.bulkSpan{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-left: unset !important;
+    border-radius: 20px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+.bulkGroup{
+    width: 70% !important;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+}
+@media screen and (max-width: 1551px) {
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+        width: 80% !important;
+    }
+    #datetimepicker {
+        width: 80% !important;
+    }
+    .bulkGroup{
+        width: 80% !important;
+    }
+    /* .icon-rtl {
+        padding-right: 25px;
+        margin-right: 25px;
+        background: url(../../images/icons/Payroll\ Format.svg) no-repeat 264px 10px;
+        background-size: 20px;
+      } */
+}
+
+.row-none{
+    display: none;
+}
